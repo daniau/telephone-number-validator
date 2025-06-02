@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 35px;
+  background-color: #3b3b4f;
+  color: #0a0a23;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  color: white;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.base-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 35px;
+
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  padding: 10px;
+  border-radius: 20px;
+  height: 360px;
+  width: 186px;
+}
+
+.con {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; */
+  background-color: #dfdfe2;
+  /* padding: 10px; */
+  width: 180px;
+    height: 350px;
+}
+
+label {
+  display: block;
+  margin: 10px auto 5px;
+  width: fit-content; /* أو رقم ثابت زي 100px */
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+
+}
+
+.phone-camera {
+  background-color: black;
+  height: 25px;
+  position: relative;
+  width: 50px;
+
+}
+
+.phone-camera::before {
+  content: "";
+  background-color: #dfdfe2;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+}
+input{
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  border: #0a0a23 solid 1.8px;
+  text-align: center;
+  margin: 10px auto;
+  width: 90%;
+}
+#results-div{
+  max-height: 200px;
+  text-align: center;
+  color: rgb(77, 56, 0);
+  overflow-y: auto;
+  width: fit-content;
+
+}
+#results-div p{
+  margin: 10px auto;
+  padding:5px;
+}
+.btn{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+#check-btn,
+#clear-btn{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0 15px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #0a0a23;
+  border: solid 1px #fff;
+  background-color: #ffffff;
+  background-image: linear-gradient(#ffffff,#928d86);
+  border-color: #ffffff;
+  border-width: 2px;
+}
+
+@media(min-width:2000px){
+  .container{
+    width: 220px;
+    height: 430px;
+  }
+  .con{
+    width: 200px;
+    height: 420px;
+  }
+  label,#results-div{
+    font-weight: 600;
+  }
+  #results-div{
+    max-height: 260px;
+  }
+}
